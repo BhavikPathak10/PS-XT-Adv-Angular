@@ -1,0 +1,17 @@
+div{
+    border:3px solid black;
+    padding:0.5em 0.75em;
+
+    &.rotate {
+        animation: rotation 15s linear infinite;
+      }
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }

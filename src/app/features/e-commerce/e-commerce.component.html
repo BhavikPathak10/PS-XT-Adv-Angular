@@ -1,0 +1,35 @@
+<section>
+    <mat-button-toggle-group name="ViewType" #viewType="matButtonToggleGroup" [value]="'Grid'" aria-label="View Type">
+        <mat-button-toggle value="Grid">Grid</mat-button-toggle>
+        <mat-button-toggle value="List">List</mat-button-toggle>
+    </mat-button-toggle-group>
+    
+    <mat-form-field appearance="outline">
+          <mat-label>Price</mat-label>
+          <input type="text"
+                 placeholder="Select range"
+                 aria-label="Price"
+                 matInput
+                 [formControl]="myControl"
+                 [matAutocomplete]="auto">
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+</section>
+<section class="grid-container" [class]="viewType.value == 'Grid'?'grid':'list'">
+        <app-product-view></app-product-view>
+        <app-product-view></app-product-view>
+        <app-product-view></app-product-view>
+        <app-product-view></app-product-view>
+        <app-product-view></app-product-view>
+        <app-product-view></app-product-view>
+        <app-product-view></app-product-view>
+        <app-product-view></app-product-view>
+        <app-product-view></app-product-view>
+        <app-product-view></app-product-view>
+        <app-product-view></app-product-view>
+        <app-product-view></app-product-view>
+</section>

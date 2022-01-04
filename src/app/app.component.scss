@@ -1,0 +1,18 @@
+.fullPage{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    mat-toolbar{
+        display: flex;
+        justify-content: space-evenly;
+        flex: 0 1 auto;
+    }
+    .routerOutlet{
+        display: flex;
+        flex:1 1 auto;
+        padding: 3em;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
