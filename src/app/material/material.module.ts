@@ -10,6 +10,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
+import { ScrollingModule } from "@angular/cdk/scrolling";
 
 @NgModule({
   declarations: [],
@@ -23,7 +24,8 @@ import {MatCardModule} from '@angular/material/card';
     MatAutocompleteModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    ScrollingModule
   ],
   exports:[
     MatToolbarModule,
@@ -34,7 +36,8 @@ import {MatCardModule} from '@angular/material/card';
     MatAutocompleteModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    ScrollingModule
   ]
 })
 export class MaterialModule { }

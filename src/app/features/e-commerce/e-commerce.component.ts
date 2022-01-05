@@ -9,7 +9,7 @@ import { Observable, startWith, map } from 'rxjs';
 })
 export class ECommerceComponent implements OnInit {
   viewType : string = "Grid";
-  
+  arr = Array.from({ length: 40 });
   myControl = new FormControl();
   options: string[] = ['<1000', 'between 1000-2500', '>2500'];
   filteredOptions: Observable<string[]> | undefined;

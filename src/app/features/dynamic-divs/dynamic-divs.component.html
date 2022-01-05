@@ -1,1 +1,7 @@
-<p>dynamic-divs works!</p>
+<ng-container (window:scroll)="onScroll($event)">
+  <div *ngFor="let item of arr; let i = index">
+    <p>Div {{ i + 1 }}</p>
+    <br />
+    <button mat-raised-button (click)="showAlert(i)">Click me!</button>
+  </div>
+</ng-container>
