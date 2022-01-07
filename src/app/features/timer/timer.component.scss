@@ -1,0 +1,16 @@
+:host {
+  height: 100%;
+  width: 100%;
+}
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  div {
+    margin: 5px;
+    flex: 1;
+    border: 1px solid;
+    max-height: 40vh;
+    overflow-y: auto;
+  }
+}

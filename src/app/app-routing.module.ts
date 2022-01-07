@@ -15,6 +15,10 @@ const routes: Routes = [
     component: ECommerceComponent,
   },
   {
+    path:'timer',
+    loadChildren:() => import('./features/timer/timer.module').then(m => m.TimerModule)
+  },
+  {
     path: 'table-sorters',
     component: TableSortersComponent,
   },

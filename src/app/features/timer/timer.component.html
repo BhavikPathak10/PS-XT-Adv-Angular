@@ -1,0 +1,24 @@
+<section>
+  <div>
+    <app-countdown-timer [data]="counterData?.limit"></app-countdown-timer>
+  </div>
+  <div>
+    <app-countdown-controller
+      (counterUpdated)="counterUpdated($event)"
+      (counterReset)="counterReset()"
+      [data]="counterData"
+    ></app-countdown-controller>
+  </div>
+</section>
+<section>
+  <div>
+    <app-countdown-logger
+      [data]="counterData?.operation"
+    ></app-countdown-logger>
+  </div>
+  <div>
+    <app-countdown-click-logger
+      [data]="counterData?.operation"
+    ></app-countdown-click-logger>
+  </div>
+</section>

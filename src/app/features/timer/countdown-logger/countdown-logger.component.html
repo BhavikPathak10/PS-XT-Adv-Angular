@@ -1,0 +1,6 @@
+<div>
+  <p *ngFor="let item of arrData">
+    {{ item.op | titlecase }}
+    at {{ item.time | date: "d-M-y  h:mm:ss a" | lowercase }}
+  </p>
+</div>

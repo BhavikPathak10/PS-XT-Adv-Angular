@@ -1,0 +1,29 @@
+<div class="controller">
+  <form [formGroup]="timerForm" (ngSubmit)="submitForm()">
+    <mat-form-field appearance="outline">
+      <mat-label>Enter timer limit</mat-label>
+      <input
+        formControlName="limit"
+        matInput
+        placeholder="Ex. 1000"
+        type="number"
+      />
+    </mat-form-field>
+    <div>
+      <button
+        [disabled]="this.timerForm.invalid"
+        mat-flat-button
+        color="primary"
+        type="submit"
+      >
+        {{ this.timerForm.value.operation | titlecase }}
+      </button>
+      <button mat-flat-button type="button" (click)="resetForm()">Reset</button>
+    </div>
+  </form>
+  <p>
+    <li *ngFor="let item of arrData">
+      {{ item.op | titlecase }} at {{ item.limit }}
+    </li>
+  </p>
+</div>
