@@ -1,0 +1,8 @@
+<span>
+  <p>
+    <li *ngFor="let item of log">
+      {{ item.operation | titlecase }} at
+      {{ item.time | date: "M-d-Y h:mm:ss a" }}
+    </li>
+  </p>
+</span>

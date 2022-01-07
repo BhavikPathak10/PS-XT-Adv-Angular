@@ -15,8 +15,16 @@ const routes: Routes = [
     component: ECommerceComponent,
   },
   {
-    path:'timer',
-    loadChildren:() => import('./features/timer/timer.module').then(m => m.TimerModule)
+    path: 'timer',
+    loadChildren: () =>
+      import('./features/timer/timer.module').then((m) => m.TimerModule),
+  },
+  {
+    path: 'timer-service',
+    loadChildren: () =>
+      import('./features/timer-service/timer-service.module').then(
+        (m) => m.TimerServiceModule
+      ),
   },
   {
     path: 'table-sorters',
@@ -26,12 +34,12 @@ const routes: Routes = [
     path: 'dynamic-divs',
     component: DynamicDivsComponent,
   },
-  { path: '',   redirectTo: '/banner', pathMatch: 'full' },
-  { path: '**', redirectTo: '/banner' }
+  { path: '', redirectTo: '/banner', pathMatch: 'full' },
+  { path: '**', redirectTo: '/banner' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

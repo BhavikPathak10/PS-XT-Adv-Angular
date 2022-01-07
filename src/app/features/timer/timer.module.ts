@@ -10,21 +10,20 @@ import { CountdownClickLoggerComponent } from './countdown-click-logger/countdow
 import { MaterialModule } from 'src/app/material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [
     TimerComponent,
     CountdownTimerComponent,
     CountdownControllerComponent,
     CountdownLoggerComponent,
-    CountdownClickLoggerComponent
+    CountdownClickLoggerComponent,
   ],
   imports: [
     CommonModule,
-    MaterialModule,
     TimerRoutingModule,
+    MaterialModule,
     FormsModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+  ],
 })
-export class TimerModule { }
+export class TimerModule {}
